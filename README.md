@@ -65,8 +65,27 @@ To write a C program to generate the Fibonacci series for the value 6.
 7.	Stop the program.
 
 ## PROGRAM
-
+```c
+#include <stdio.h>
+int main()
+{
+    int n = 6;
+    int fst = 0, sec= 1, next, i;
+    printf("Fibonacci series for %d terms: \n", n);
+    printf("%d %d ", fst, sec);
+    for (i = 3; i <= n; i++)
+    {
+         next = fst + sec;
+         printf("%d ", next);
+         fst = sec;
+         sec = next;
+    }
+   printf("\n");
+   return 0;
+}
+```
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/02e16955-8f7e-4b21-912c-0e1a2ae98228)
 
 
 
@@ -93,10 +112,28 @@ To write a C program to read n elements as input and print the last element of t
 5.	Stop the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+int main()
+{
+    int n, i;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++)
+    {
+       scanf("%d", &arr[i]);
+    }
+    printf("The last element is: %d\n", arr[n - 1]);
+    return 0;
+}
+```
 
 ## OUTPUT
 
 
+![image](https://github.com/user-attachments/assets/e9f9d867-0cad-497d-bf44-f34e36bb16f3)
 
 
 
@@ -123,10 +160,29 @@ To write a C Program to count total number of positive elements in an array.
 6.	Stop the program.
 
 ## PROGRAM
-
+```c
+#include <stdio.h>
+int main() {
+     int n, count = 0;
+     printf("Enter the number of elements: ");
+     scanf("%d", &n);
+     int arr[n];
+     printf("Enter %d elements:\n", n);
+     for (int i = 0; i < n; i++) {
+          scanf("%d", &arr[i]);
+     }
+     for (int i = 0; i < n; i++) {
+          if (arr[i] > 0) {
+              count++;}
+     }
+     printf("Total number of positive elements: %d\n", count);
+     return 0;
+}
+```
 
 ## OUTPUT
 
+![image](https://github.com/user-attachments/assets/54e7f8b4-2ec6-4409-a8c5-16304070e748)
 
 
 
@@ -159,9 +215,28 @@ To write a C program to replace all even elements with 'E' in one dimensional ar
  Print the updated array after replacements.
 
 ## Program:
-
+```c
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+        if(a[i]%2==0){
+            printf("E ");
+        }
+        else{
+            printf("%d ",a[i]);
+        }
+        
+    }
+    return 0;
+}
+```
 ## Output:
  
+![image](https://github.com/user-attachments/assets/206b44a5-2231-40be-a952-03dc721e7ac0)
 
 
 ## Result:

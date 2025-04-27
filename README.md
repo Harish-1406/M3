@@ -14,10 +14,32 @@ To write a program to prepare EMI calculator using function without return type 
 6.	Stop the program.
 
 ## PROGRAM
-
+```c
+#include <stdio.h>
+#include <math.h>
+void calculateEMI(float principal, float rate, int months)
+{
+    float emi, amt, r, t;
+    r = rate / (12 * 100);
+    t = months;
+    emi = (principal * r * pow(1 + r, t)) / (pow(1 + r, t) - 1);
+    printf("Monthly EMI is: %.3f\n", emi);
+}
+int main()
+{
+    float principal, rate;
+    int months;
+    scanf("%f", &principal);
+    scanf("%f", &rate);
+    scanf("%d", &months);
+    calculateEMI(principal, rate, months);
+    return 0;
+}
+```
 
 ## OUTPUT
 
+![image](https://github.com/user-attachments/assets/b51ab25a-e2da-4265-a4af-a2170d6eb471)
 
 
 
